@@ -1,7 +1,48 @@
 <html>
-	<head><title>html标题</title></head>
+	<head>
+		<title>html标题</title>
+		<script>
+			function showTime() {
+				var time = "现在时间："+Date();
+				document.getElementById("demo").innerHTML = time;
+			}
+			window.onload = function() {
+				setInteral(function() {
+					showTime();
+				}, 1000);
+			}
+			function showBook() {
+				document.getElementById("ansBook").innerHTML = "别急，这个现在还没做出来呢";
+			}
+		</script>
+	</head>
 	<body>
-		<p align = "center">Hello World</p>
-		<a href="www.baidu.com">我是个测试</a>
+		<p align="center" id="demo">
+			<script>
+				var nowTime = new Date();
+				var year = nowTime.getFullYear();
+				var month = nowTime.getMonth();
+				var day = nowTime.getDate();
+				var time1 = "现在时间："+year+"年"+month+"月"+day+"日";
+				document.write(time1);
+			</script>
+		</p>
+		
+		<p align="center"><button type="button" onclick="showBook()">答案之书</button><label id="ansBook"></label></p>
+		<!-- <image src="pic.jsp"></image> -->
+		<p align="center">今日宜：
+			<script>
+				var arr = ["放松", "休息", "大笑", "散步", "观光", "游戏", "读书", "早睡"];
+				var n1 = Math.round(Math.random()*(arr.length-1));
+				do {
+					var n2 = Math.round(Math.random()*(arr.length-1));
+				}while (n1==n2);
+				do {
+					var n3 = Math.round(Math.random()*(arr.length-1));
+				}while (n1==n3 || n2==n3);
+					
+				document.write(arr[n1]+"、"+arr[n2]+"、"+arr[n3]);
+			</script>
+		</p>
 	</body>
 </html>
