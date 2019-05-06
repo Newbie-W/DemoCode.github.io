@@ -21,7 +21,7 @@
 			<script>
 				var nowTime = new Date();
 				var year = nowTime.getFullYear();
-				var month = nowTime.getMonth();
+				var month = nowTime.getMonth()+1;
 				var day = nowTime.getDate();
 				var time1 = "现在时间："+year+"年"+month+"月"+day+"日";
 				document.write(time1);
@@ -32,7 +32,7 @@
 		<!-- <image src="pic.jsp"></image> -->
 		<p align="center">今日宜：
 			<script>
-				var arr = ["放松", "休息", "大笑", "散步", "观光", "游戏", "读书", "早睡", "工作", "学习"];
+				var arr = ["放松", "休息", "大笑", "散步", "观光", "游戏", "读书", "早睡", "工作", "学习", "喝水", "锻炼"];
 				var n1 = Math.round(Math.random()*(arr.length-1));
 				do {
 					var n2 = Math.round(Math.random()*(arr.length-1));
