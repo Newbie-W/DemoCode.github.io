@@ -43,6 +43,20 @@
 					
 				document.write(arr[n1]+"、"+arr[n2]+"、"+arr[n3]);
 			</script>
+			<br>
+			<img id="image"> </img>
+			<script>
+				var pic = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg", "img6.jpg", "img7.jpg", "img8.jpg", "img9.jpg", "img10.jpg", "img11.jpg", "img12.jpg"];
+				var picture = Math.round(Math.random()*(pic.length-1));
+				/*do {
+					var n2 = Math.round(Math.random()*(arr.length-1));
+				}while (n1==n2);
+				do {
+					var n3 = Math.round(Math.random()*(arr.length-1));
+				}while (n1==n3 || n2==n3);*/
+				//document.write(pic[picture]);
+				document.getElementById("image").src = pic[picture];
+			</script>
 		</p>
 	</body>
 </html>
